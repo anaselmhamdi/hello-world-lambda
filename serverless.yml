@@ -1,0 +1,12 @@
+service: hello-world
+provider:
+  name: aws
+  runtime: python3.8
+functions:
+  helloWorld:
+    handler: index.hello_world
+    events:
+      - http:
+          path: /
+          method: GET
+          cors: true
